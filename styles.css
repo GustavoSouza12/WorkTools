@@ -1,0 +1,49 @@
+body{
+    text-align: center;
+    margin-top: 70px;
+} 
+.menu-container{
+    display: flex;
+
+    max-width: 1440px;
+    height: auto;
+
+    margin: 0 auto;
+}
+.menu-container .button{
+    width: 200px;
+    height: 150px;
+    
+    display: grid;
+   
+    cursor: pointer;
+}
+.menu-container .ilustration{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto
+}  
+a{
+  
+    
+}
+
+.content_container div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#imageAndVideo{
+    width: 500px;
+    height: 400px;
+    background-color: red;
+   visibility: hidden;
+}
+#documentation{
+    width: 500px;
+    height: 400px;
+    background-color: green;
+   visibility: hidden;
+}
