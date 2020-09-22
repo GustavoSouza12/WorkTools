@@ -13,10 +13,12 @@ body{
 .menu-container .button{
     width: 200px;
     height: 150px;
-    
+    margin: 0px 15px;
+
     display: grid;
    
     cursor: pointer;
+
 }
 .menu-container .ilustration{
     height: 100px;
@@ -35,15 +37,21 @@ a{
     transform: translate(-50%, -50%);
 }
 
-#imageAndVideo{
+#image_and_video{
     width: 500px;
     height: 400px;
     background-color: red;
    visibility: hidden;
+
+   display: grid;
 }
 #documentation{
     width: 500px;
     height: 400px;
     background-color: green;
    visibility: hidden;
+} 
+
+li i{
+    cursor: pointer;
 }

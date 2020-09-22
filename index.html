@@ -5,12 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Work tools</title>
         <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <!--bootstrap-->
     </head>
-    <body>
- 
-           
-              
+    <body>             
         <div class="menu-container">
             <div class="button" id="button1" onclick="showImageAndVideo()">
                 <img class="ilustration" src="icon/imageAndVideo.png">
@@ -23,23 +21,31 @@
             <div class="button">
                 <img class="ilustration" src="icon/imageAndVideo.png">
                 <a onclick="showImageAndVideo()">Manipulação de imagem e vídeo</a>
-           </div>
-         
-        </div>      
-         
+           </div>    
+        </div>             
     <div class="content_container">
-        <div id="imageAndVideo">
+        <div id="image_and_video">
+            <div class="add_element">
+                <h3>Name</h3>
+                <input id="text" type="text" placeholder="Nome para ferramenta"></input>
+                <input id="link" type="text" placeholder="Link da ferramenta"></input>
+                <button id="add">AA</button>
+             
+            </div>  
+            
+            
+            <ul id="list">
+          
+            </ul>  
+          
+        </div>
 
+        <div id="documentation">          
         </div>
-        <div id="documentation">
-            
-        </div>
-        <div id="color">
-            
+        <div id="color">          
         </div>
     </div>    
     </body>
-
-
     <script src="main.js"></script>
-</html>
+
+</html> 
