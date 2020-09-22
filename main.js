@@ -43,6 +43,7 @@ function showDocumentation(){
 
 }
 
+
 const image_and_video_text = document.querySelector("#text");
 const image_and_video_add = document.querySelector("#add");
 const image_and_video_list = document.querySelector("#list")
@@ -72,6 +73,18 @@ image_and_video_add.onclick = function () {
 
 
 };
+
+list.addEventListener('click', deleteTool)
+
+function deleteTool(ev) {
+    if (ev.target.classList.contains('delete')) {
+        ev.target.parentElement.remove()
+        var id = this.getAttribute('id')
+        local_storage_text_array.splice(id, 1)
+        localStorage.setItem('local_storage_text_array ', JSON.stringify(local_storage_text_array))
+    }
+}
+
 
 function showTasks(){
     let i = 0
