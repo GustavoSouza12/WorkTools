@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    margin-top: 70px;
+    background-color:  #ffffff;
 } 
 .menu-container{
     display: flex;
@@ -8,7 +8,7 @@ body{
     max-width: 1440px;
     height: auto;
 
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .menu-container .button{
     width: 200px;
@@ -19,39 +19,68 @@ body{
    
     cursor: pointer;
 
+    border-radius: 40px;
+    padding: 5px;
 }
 .menu-container .ilustration{
     height: 100px;
     width: 100px;
     margin: 0 auto
 }  
-a{
-  
-    
-}
 
-.content_container div{
+.content_container .container{
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
 }
-
-#image_and_video{
-    width: 500px;
+.container{
+  
     height: 400px;
-    background-color: red;
-   visibility: hidden;
+    background-color: #114791;
+    visibility: hidden;
 
    display: grid;
 }
-#documentation{
-    width: 500px;
-    height: 400px;
-    background-color: green;
-   visibility: hidden;
-} 
+input{ 
+    border:0;
+    border-bottom:1px solid #03b3ce;  
+    background:transparent;
+    width: 35%;
+    padding: 8px 0 5px 0;
+    font-size: 28px;
+    color: #fcfcfc;
+    
+}
 
+input:focus{ 
+   border:none;	
+   outline:none;
+   border-bottom:1px solid#03b3ce;	
+}
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #03b3ce;
+    opacity: 1; /* Firefox */
+  }
+  
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #03b3ce;
+  }
+  
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #03b3ce;
+  }
+
+  li{
+    list-style: none;
+    padding: 5px 15px;
+    font-size: 17px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.16);
+    border-radius: 10px;
+    transition: .4s;
+    text-align: center;
+    width: 50%;
+    margin: 3px auto;
+}
 li i{
     cursor: pointer;
 }

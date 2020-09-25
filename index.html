@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <!--bootstrap-->
     </head>
-    <body>             
+    <body>
+        <h1>Work Tools</h1>
+        <span>for developers</span>             
         <div class="menu-container">
             <div class="button" id="button1" onclick="showImageAndVideo()">
                 <img class="ilustration" src="icon/imageAndVideo.png">
-                <a>Manipulação de imagem e vídeo</a>
+                <a>Manipulação de imagem, vídeo e cores</a>
            </div>
            <div class="button" id="button2" onclick="showDocumentation()">
                 <img class="ilustration" src="icon/documentation.png">
@@ -24,12 +26,11 @@
            </div>    
         </div>             
     <div class="content_container">
-        <div id="image_and_video">
+        <div id="image_and_video" class="container">
             <div class="add_element">
-                <h3>Name</h3>
-                <input id="text" type="text" placeholder="Nome para ferramenta"></input>
-                <input id="link" type="text" placeholder="Link da ferramenta"></input>
-                <button id="add">AA</button>
+                <input id="text" type="text" placeholder="Nome da ferramenta"></input>
+                <input id="link" type="text" placeholder="Link para a ferramenta"></input>
+                <button id="add">Adcionar</button>
              
             </div>  
             
@@ -40,9 +41,9 @@
           
         </div>
 
-        <div id="documentation">          
+        <div id="documentation" class="container">          
         </div>
-        <div id="color">          
+        <div id="color" class="container">          
         </div>
     </div>    
     </body>

@@ -7,13 +7,13 @@ function showImageAndVideo(){
 
     if (image_and_video_container.style.visibility === "hidden"){
         image_and_video_container.style.visibility = "visible"
-        image_and_video_button.style.background = "pink"
+        image_and_video_button.style.background = "#03b3ce"
     } else{
         image_and_video.style.visibility = "hidden"
         image_and_video_button.style.background = "none"
     }  
 
-    if (documentation_button.style.background = "pink"){
+    if (documentation_button.style.background = "#03b3ce"){
         documentation_button.style.background = "none"
         documentation_container.style.visibility = "hidden"
     }
@@ -23,20 +23,20 @@ function showDocumentation(){
     let documentation_container = document.querySelector("#documentation")
     let button_documentation = document.querySelector("#button2")
 
-    let image_and_video_container = document.querySelector("#imageAndVideo")
+    let image_and_video_container = document.querySelector("#image_and_video")
     let image_and_video_button = document.querySelector("#button1")
 
 
     if (documentation.style.visibility === "hidden"){
         documentation.style.visibility = "visible"
-        button_documentation.style.background = "pink"
+        button_documentation.style.background = "#03b3ce"
     } else{
         documentation_container.style.visibility = "hidden"
         button_documentation.style.background = "none"
       
        
     }  
-    if (image_and_video_button.style.background = "pink"){
+    if (image_and_video_button.style.background = "#03b3ce"){
         image_and_video_button.style.background = "none"
         image_and_video_container.style.visibility = "hidden"
     }
