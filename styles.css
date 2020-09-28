@@ -2,6 +2,24 @@ body{
     text-align: center;
     background-color:  #ffffff;
 } 
+.header{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+.header .header_image{
+    width: 400px;
+}
+.header .header_title{
+    position: absolute;
+    top: -15px;
+}
+.header .header_subtitle{
+    position: absolute;
+ 
+    right: 5%;
+    bottom: 5%;
+}
 .menu-container{
     display: flex;
 
@@ -69,7 +87,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     color: #03b3ce;
   }
 
-  li{
+li{
     list-style: none;
     padding: 5px 15px;
     font-size: 17px;
