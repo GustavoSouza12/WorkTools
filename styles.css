@@ -1,25 +1,37 @@
 body{
     text-align: center;
-    background-color:  #ffffff;
+    background: linear-gradient(to right,  #5a586e,  #3f3d56);
+    color: #f5f5f5;
+
+    overflow-x: hidden;
 } 
 .header{
+    margin-top: 15px;
     position: relative;
     width: 500px;
     margin: 0 auto;
+    color: white;
 }
+
 .header .header_image{
-    width: 400px;
+    max-width: 400px;
 }
 .header .header_title{
     position: absolute;
-    top: -15px;
+    top: -5%;
+    left: -8%;
+
+    font-size: 50px;
 }
 .header .header_subtitle{
     position: absolute;
  
-    right: 5%;
-    bottom: 5%;
+    right: -8%;
+    bottom: 19%;
+
+    font-size: 30px;
 }
+
 .menu-container{
     display: flex;
 
@@ -43,7 +55,9 @@ body{
 .menu-container .ilustration{
     height: 100px;
     width: 100px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: black 1px 1px 1px 1px;
 }  
 
 .content_container .container{
@@ -53,18 +67,21 @@ body{
 .container{
   
     height: 400px;
-    background-color: #114791;
+    background: #413e5c;
     visibility: hidden;
 
    display: grid;
 }
+.fa-trash{
+    color: black;
+}
 input{ 
     border:0;
-    border-bottom:1px solid #03b3ce;  
+    border-bottom:1px solid #EEB80B;  
     background:transparent;
     width: 35%;
     padding: 8px 0 5px 0;
-    font-size: 28px;
+    font-size: 15px;
     color: #fcfcfc;
     
 }
@@ -72,26 +89,26 @@ input{
 input:focus{ 
    border:none;	
    outline:none;
-   border-bottom:1px solid#03b3ce;	
+   border-bottom:1px solid#EEB80B;	
 }
 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #03b3ce;
+    color:#EEB80B;
     opacity: 1; /* Firefox */
   }
   
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #03b3ce;
+    color: #EEB80B;
   }
   
 input::-ms-input-placeholder { /* Microsoft Edge */
-    color: #03b3ce;
+    color:#EEB80B;
   }
 
 li{
     list-style: none;
     padding: 5px 15px;
     font-size: 17px;
-    background-color: #fff;
+    background-color: rgb(163, 81, 201);
     box-shadow: 0 2px 8px rgba(0,0,0,.16);
     border-radius: 10px;
     transition: .4s;

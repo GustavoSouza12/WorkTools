@@ -65,7 +65,7 @@ image_and_video_add.onclick = function () {
             localStorage.setItem('local_storage_text_array', JSON.stringify(local_storage_text_array))
             localStorage.setItem('local_storage_link_array', JSON.stringify(local_storage_link_array))
 
-            image_and_video_list.innerHTML += `<li><a href=${link} target="_blank">${text}</a><i class="fa fa-trash delete" ></i></li>`
+            image_and_video_list.innerHTML += `<li><a href=${link} target="_blank">${text}</a><i class="fa fa-trash" ></i></li>`
 
             image_and_video_text.value = ''
             image_and_video_link.value = ''
@@ -74,7 +74,7 @@ image_and_video_add.onclick = function () {
 
 };
 
-list.addEventListener('click', deleteTool)
+image_and_video_list.addEventListener('click', deleteTool)
 
 function deleteTool(ev) {
     if (ev.target.classList.contains('delete')) {
