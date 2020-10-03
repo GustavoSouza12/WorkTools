@@ -7,47 +7,69 @@
         <link rel="stylesheet" href="styles.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
     </head>
     <body>
         <header class="header">
             <h1 class="header_title">Work Tools</h1>
             <img class="header_image"src="img/logo.svg" alt="Work tools"/>
-            <h3 class="header_subtitle">for developers</h3>
+            <h3 class="header_subtitle">For Developers</h3>
         </header>                
-        <div class="menu-container">
-            <div class="button" id="button1" onclick="showImageAndVideo()">
-                <img class="ilustration" src="icon/imageAndVideo.png">
-                <a>Imagem, vídeo e cores</a>
-            </div>
-            <div class="button" id="button2" onclick="showDocumentation()">
-                <img class="ilustration" src="icon/documentation.png">
-                <a onclick="showDocumentation()">Documentações</a>
-            </div>
-            <div class="button">
-                <img class="ilustration" src="icon/imageAndVideo.png">
-                <a onclick="showImageAndVideo()">Inspiração para design</a>
-            </div>
-            <div class="button">
-                <img class="ilustration" src="icon/imageAndVideo.png">
-                <a onclick="showImageAndVideo()">Tools para fontes</a>
-            </div>
-            <div class="button">
-                <img class="ilustration" src="icon/imageAndVideo.png">
-                <a onclick="showImageAndVideo()">Tools para ícones</a>
-            </div>        
+        <div class="menu-container container">
+            <div class="row">
+                
+                <div class="button col-md-3 col-6" >
+                    <img class="ilustration" id="button1" onclick="showImageAndVideo()" src="icon/imageAndVideo.png">
+                    <span class="button_title">Imagem e vídeo</span>
+                </div>
+                <div class="button col-md-3 col-6">
+                    <img class="ilustration" id="button2" onclick="showDocumentation()" src="icon/documentation.png">
+                    <span class="button_title">Documentações</span>
+                </div>
+                <div class="button col-md-3 col-6">
+                    <img class="ilustration" id="button3" onclick="showDesignInspiration()" src="icon/design.png">
+                    <span class="button_title">Inspiração Design</span>
+                </div>
+                <div class="button col-md-3 col-6">
+                    <img class="ilustration" id="button4" onclick="showFonts()" src="icon/font.jpg">
+                    <span class="button_title">Fontes</span>
+                </div>
+                
+            </div>    
+            <div class="row">
+                
+                <div class="button col-md-3 col-6"  >
+                    <img class="ilustration" id="button5" onclick="showIlustrations()" src="icon/ilustrations.png">
+                    <span class="button_title">Ilustrações</span>
+                </div>
+                <div class="button col-md-3 col-6"  >
+                    <img class="ilustration" id="button6" onclick="showLogo()" src="icon/logo.jpg">
+                    <span class="button_title">Logo e cores</span>
+                </div>
+                <div class="button col-md-3 col-6">
+                    <img class="ilustration" id="button7" src="icon/design.png">
+                    <span class="button_title"></span>
+                </div>
+                <div class="button col-md-3 col-6">
+                    <img class="ilustration" id="button8" onclick="showUsefullLinks()" src="icon/link.png">
+                    <span class="button_title">Links úteis</span>
+                </div>
+                
+            </div>    
         </div>             
     <div class="content_container">
-        <div id="image_and_video" class="container">
+        <div id="image_and_video" class="container_section">
             <div class="add_element">
-                <input id="text" type="text" placeholder="Nome da ferramenta"></input>
+                <input id="text" maxlength="30" type="text" placeholder="Nome da ferramenta"></input>
                 <input id="link" type="text" placeholder="Link para a ferramenta"></input>
-                <button id="add">Adicionar</button>
+                <button id="add">Adcionar</button>
              
             </div>    
             <ul id="list">
             </ul>    
         </div>
-        <div id="documentation" class="container">  
+        <div id="documentation" class="container_section">  
             <div class="add_element_documentation">
                 <input id="documentation_text" type="text" placeholder="Nome da ferramenta"></input>
                 <input id="documentation_link" type="text" placeholder="Link para a ferramenta"></input>
@@ -60,10 +82,30 @@
           
             </ul>          
         </div>
-        <div id="color" class="container">          
+        <div id="design_inspiration" class="container_section">
+
+                    
+        </div>
+        <div id="fonts" class="container_section">
+
+                    
+        </div>
+        <div id="ilustrations" class="container_section">
+
+                    
+        </div>
+        <div id="logo" class="container_section">
+
+                    
+        </div>
+        <div id="usefull_links" class="container_section">
+
+                    
         </div>
     </div>    
     </body>
     <script src="main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </html> 
