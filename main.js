@@ -128,8 +128,8 @@ function imageAndVideo__saveAndShowTools(){
         var text = image_and_video__text.value
         var link = image_and_video__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == "") || (link == "")) {
+            alert('Please, fill in two fields!')
         } else {
             image_and_video__text_array.push(text)
             image_and_video__link_array.push(link)
@@ -152,7 +152,7 @@ function imageAndVideo__saveAndShowTools(){
     function imageAndVideo__showTools(){
         image_and_video__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('image_and_video__link_array')) || [];
             image_and_video__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -218,7 +218,7 @@ function documentation__saveAndShowTools(){
     function documentation__showTools(){
         documentation__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('documentation__link_array')) || [];
             documentation__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -260,8 +260,8 @@ function design__saveAndShowTools(){
         var text = design__text.value
         var link = design__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             design__text_array.push(text)
@@ -285,7 +285,7 @@ function design__saveAndShowTools(){
     function design__showTools(){
         design__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('design__link_array')) || [];
             design__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -327,8 +327,8 @@ function font__saveAndShowTools(){
         var text = font__text.value
         var link = font__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             font__text_array.push(text)
@@ -352,7 +352,7 @@ function font__saveAndShowTools(){
     function font__showTools(){
         font__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('font__link_array')) || [];
             font__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -394,8 +394,8 @@ function illustration__saveAndShowTools(){
         var text = illustration__text.value
         var link = illustration__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             illustration__text_array.push(text)
@@ -419,7 +419,7 @@ function illustration__saveAndShowTools(){
     function illustration__showTools(){
         illustration__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('illustration__link_array')) || [];
             illustration__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -461,8 +461,8 @@ function logo__saveAndShowTools(){
         var text = logo__text.value
         var link = logo__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             logo__text_array.push(text)
@@ -486,7 +486,7 @@ function logo__saveAndShowTools(){
     function logo__showTools(){
         logo__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('logo__link_array')) || [];
             logo__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -527,8 +527,8 @@ function front_and_back__saveAndShowTools(){
         var text = front_and_back__text.value
         var link = front_and_back__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             front_and_back__text_array.push(text)
@@ -552,7 +552,7 @@ function front_and_back__saveAndShowTools(){
     function front_and_back__showTools(){
         front_and_back__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('front_and_back__link_array')) || [];
             front_and_back__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 
@@ -593,8 +593,8 @@ function usefull_link__saveAndShowTools(){
         var text = usefull_link__text.value
         var link = usefull_link__link.value
 
-        if (text == '') {
-            alert('Please, write a task!')
+        if ((text == '') || (link == '')) {
+            alert('Please, fill in two fields!')
         } else {
             // saving in local storage
             usefull_link__text_array.push(text)
@@ -618,7 +618,7 @@ function usefull_link__saveAndShowTools(){
     function usefull_link__showTools(){
         usefull_link__text_array.forEach(function (element, index) {
             let i = 0
-            var link = JSON.parse(localStorage.getItem('links')) || [];
+            var link = JSON.parse(localStorage.getItem('usefull_link__link_array')) || [];
             usefull_link__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
                                     <i id="" class="fa fa-trash delete"></i> 

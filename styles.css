@@ -7,7 +7,6 @@ body{
     padding-left: -100px;
     margin: 0 auto;
 
-    overflow: hidden;
     background: linear-gradient(to right,  #5a586e,  #3f3d56);
 } 
 .header{
@@ -70,7 +69,7 @@ body{
 .content_container .container_section{
     position: absolute;
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     background: #413e5c;
     visibility: hidden;
 }
@@ -156,7 +155,7 @@ li a {
     color: rebeccapurple;
     font-weight: 400;
 
-    font-size: 25px;
+    font-size: 22px;
 }
 li a:hover{
     color: rgb(138, 34, 187)
@@ -288,7 +287,13 @@ footer .made_by {
 }
 
 @media only screen and (max-width: 768px) {
+    body{
+        overflow-y: visible;
+    }
     ul{
         width: 100%;
+    }
+    .content_container{
+        margin-bottom: 100px;
     }
 }
