@@ -1,14 +1,16 @@
 body{
-    text-align: center;
-    background: linear-gradient(to right,  #5a586e,  #3f3d56);
-    color: #f5f5f5;
-    padding-left: -100px;
-    overflow: hidden;
     height: 100vh !important;
+    
+    text-align: center;
+    color: #f5f5f5;
+
+    padding-left: -100px;
     margin: 0 auto;
+
+    overflow: hidden;
+    background: linear-gradient(to right,  #5a586e,  #3f3d56);
 } 
 .header{
-    
     position: relative;
     width: 300px;
     margin: 0 auto;
@@ -37,19 +39,19 @@ body{
 }
 
 .menu-container{
-   
-
     max-width: 1440px;
     height: auto;
-
-
 }
+
 .menu-container .button{
     display: grid;
     grid-template-columns: 2;
 
     text-align: center;
+
+    margin-bottom: 15px ;
 }
+
 .menu-container .ilustration{
     height: 100px;
     width: 100px;
@@ -59,6 +61,7 @@ body{
 
     cursor: pointer;
 }  
+
 .menu-container .button_title{
     color: white;
     font-size: 16px;
@@ -67,13 +70,12 @@ body{
 .content_container .container_section{
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 30vh;
     background: #413e5c;
     visibility: hidden;
-
 }
 
-.add_element{
+.image_and_video--add_element, .documentation--add_element, .design--add_element, .font--add_element, .illustration--add_element, .logo--add_element, .front_and_back--add_element, .usefull_link--add_element{
     position: relative;
     display: block;
     width: 50%;
@@ -85,6 +87,7 @@ body{
 .fa-trash{
     color: black;
 }
+
 input{ 
     border:0;
     border-bottom:1px solid #EEB80B;  
@@ -92,11 +95,8 @@ input{
     width: 35%;
   
     font-size: 15px;
-    color: #fcfcfc;
-   
-    
+    color: #fcfcfc;  
 }
-
 
 input:focus{ 
    border:none;	
@@ -106,50 +106,189 @@ input:focus{
 input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color:#EEB80B;
     opacity: 1; /* Firefox */
-  }
+}
   
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #EEB80B;
-  }
+}
   
 input::-ms-input-placeholder { /* Microsoft Edge */
     color:#EEB80B;
-  }
-#list{
-    padding: 0;
-    margin-top: 20px;
-    width: 50%;
-    overflow-y: scroll;
-    height: 25vh;
-    margin: 0 auto;
-
 }
-li{
-    list-style: none;
 
-    font-size: 17px;
-    background-color: #bba968;
-    box-shadow: 0 2px 8px rgba(0,0,0,.16);
-    border-radius: 10px;
-    transition: .4s;
-    text-align: center;
+ul{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 25vh;
     width: 50%;
-   
-    text-decoration: none;
-    margin: 8px auto;
+    padding: 0;
+    margin-top: 20px auto 0px auto;
 
+    overflow-y: scroll;
+}
+
+li{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
+    width: auto;
+    list-style-type: none;
+
+    margin: 8px 4px;
+    padding: 8px;
+
+    font-size: 17px;
+    text-align: center;
+
+    background-color: #d1b654;
+    box-shadow: 0 2px 8px rgba(0,0,0,.16);
+    border-radius: 10px;
+   
+    text-decoration: none;
 }
 li a {
+    width: auto;
     
+    text-decoration: none !important;
+    color: rebeccapurple;
+    font-weight: 400;
+
+    font-size: 25px;
 }
-li i{
-    cursor: pointer;
+li a:hover{
+    color: rgb(138, 34, 187)
 }
 
-@media screen and (max-width : 1000px) {
-   .add_element{
+li i{
+    width: auto;
+    cursor: pointer;
+    font-size: 25px;
+}
+.content_container .add--button{
+    position: relative;
+
+    padding: 10px;
+    margin: 5px;
+
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: rgba(255, 255, 255, 0.4);
+    background-color:  #342f64;
+
+    border: none;
+    transition: 0.5s;
+}
+
+.add--button:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.add--button span{
+    display: block;
+    position: absolute;
+    background: #f0d16e;
+}
+
+.add--button span:nth-child(1){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.add--button:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+.add--button span:nth-child(2){
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
-   }
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.add--button:hover span:nth-child(2){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.add--button span:nth-child(3){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.add--button:hover span:nth-child(3){
+    transform: scaleX(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+.add--button span:nth-child(4){
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.add--button:hover span:nth-child(4){
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+}
+footer{
+    position: fixed;
+    bottom: 0;
+
+    width: 100vw;
+    height: 5vh;
+
+    text-align: center;
+    font-size: 20px;
+
+    background-color: #413e5c;
+}
+footer .made_by {
+    font-size: 25px;
+    
+    text-decoration: none !important;
+    color: white;
+}
+.made_by:hover {
+    color: #f0d16e;
+}
+
+@media only screen and (max-width: 768px) {
+    ul{
+        width: 100%;
+    }
 }

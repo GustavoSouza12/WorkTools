@@ -1,108 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Work tools</title>
         <link rel="stylesheet" href="styles.css"/>
+        <!--font awesome-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <!--bootstrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     </head>
     <body>
+
         <header class="header">
             <h1 class="header_title">Work Tools</h1>
             <img class="header_image"src="img/logo.svg" alt="Work tools"/>
             <h3 class="header_subtitle">For Developers</h3>
-        </header>                
+        </header>     
+
         <div class="menu-container container">
             <div class="row">
                 
                 <div class="button col-md-3 col-6" >
                     <img class="ilustration" id="button1" onclick="showImageAndVideo()" src="icon/imageAndVideo.png">
-                    <span class="button_title">Imagem e vídeo</span>
+                    <span class="button_title">Image and video</span>
                 </div>
                 <div class="button col-md-3 col-6">
                     <img class="ilustration" id="button2" onclick="showDocumentation()" src="icon/documentation.png">
-                    <span class="button_title">Documentações</span>
+                    <span class="button_title">Documentation</span>
                 </div>
                 <div class="button col-md-3 col-6">
                     <img class="ilustration" id="button3" onclick="showDesignInspiration()" src="icon/design.png">
-                    <span class="button_title">Inspiração Design</span>
+                    <span class="button_title">Design</span>
                 </div>
                 <div class="button col-md-3 col-6">
                     <img class="ilustration" id="button4" onclick="showFonts()" src="icon/font.jpg">
-                    <span class="button_title">Fontes</span>
+                    <span class="button_title">Fonts</span>
                 </div>
-                
+    
             </div>    
+
             <div class="row">
-                
+
                 <div class="button col-md-3 col-6"  >
-                    <img class="ilustration" id="button5" onclick="showIlustrations()" src="icon/ilustrations.png">
-                    <span class="button_title">Ilustrações</span>
+                    <img class="ilustration" id="button5" onclick="showIllustrations()" src="icon/ilustrations.png">
+                    <span class="button_title">Illustrations</span>
                 </div>
                 <div class="button col-md-3 col-6"  >
                     <img class="ilustration" id="button6" onclick="showLogo()" src="icon/logo.jpg">
-                    <span class="button_title">Logo e cores</span>
+                    <span class="button_title">Logo and colors</span>
                 </div>
                 <div class="button col-md-3 col-6">
-                    <img class="ilustration" id="button7" src="icon/design.png">
-                    <span class="button_title"></span>
+                    <img class="ilustration" id="button7" onclick="showFrontAndBack()" src="icon/frontAndBack.png">
+                    <span class="button_title">Front and Back</span>
                 </div>
                 <div class="button col-md-3 col-6">
                     <img class="ilustration" id="button8" onclick="showUsefullLinks()" src="icon/link.png">
-                    <span class="button_title">Links úteis</span>
+                    <span class="button_title">Usefull links</span>
                 </div>
                 
             </div>    
-        </div>             
-    <div class="content_container">
-        <div id="image_and_video" class="container_section">
-            <div class="add_element">
-                <input id="text" maxlength="30" type="text" placeholder="Nome da ferramenta"></input>
-                <input id="link" type="text" placeholder="Link para a ferramenta"></input>
-                <button id="add">Adcionar</button>
-             
-            </div>    
-            <ul id="list">
-            </ul>    
-        </div>
-        <div id="documentation" class="container_section">  
-            <div class="add_element_documentation">
-                <input id="documentation_text" type="text" placeholder="Nome da ferramenta"></input>
-                <input id="documentation_link" type="text" placeholder="Link para a ferramenta"></input>
-                <button id="documentation_add">Adcionar</button>
-             
-            </div>  
-            
-            
-            <ul id="documentation_list">
-          
-            </ul>          
-        </div>
-        <div id="design_inspiration" class="container_section">
+        </div>      
 
+        <div class="content_container">
+            <div id="image_and_video" class="container_section">
+                <div class="image_and_video--add_element">
+                    <input id="image_and_video--text" maxlength="30" type="text" placeholder="Name"></input>
+                    <input id="image_and_video--link" type="text" placeholder="Link"></input>
+                    <button id="image_and_video--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>
+                
+                </div>    
+                <ul id="image_and_video--list"></ul>    
+            </div>
+            <div id="documentation" class="container_section">  
+                <div class="documentation--add_element">
+                    <input id="documentation--text" type="text" placeholder="Name"></input>
+                    <input id="documentation--link" type="text" placeholder="Link"></input>
+                    <button id="documentation--add" class="add--button">  
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>
+                </div>  
+                <ul id="documentation--list"></ul>          
+            </div>
+            <div id="design_inspiration" class="container_section">
+                <div class="design--add_element">
+                    <input id="design--text" type="text" placeholder="Name"></input>
+                    <input id="design--link" type="text" placeholder="Link"></input>
+                    <button id="design--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>
                     
-        </div>
-        <div id="fonts" class="container_section">
-
-                    
-        </div>
-        <div id="ilustrations" class="container_section">
-
-                    
-        </div>
-        <div id="logo" class="container_section">
-
-                    
-        </div>
-        <div id="usefull_links" class="container_section">
-
-                    
-        </div>
-    </div>    
+                </div>  
+                <ul id="design--list"></ul>          
+            </div>
+            <div id="font" class="container_section">
+                <div class="font--add_element">
+                    <input id="font--text" type="text" placeholder="Name"></input>
+                    <input id="font--link" type="text" placeholder="Link"></input>
+                    <button id="font--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>   
+                </div>  
+                <ul id="font--list"></ul>                        
+            </div>
+            <div id="illustration" class="container_section">
+                <div class="illustration--add_element">
+                    <input id="illustration--text" type="text" placeholder="Name"></input>
+                    <input id="illustration--link" type="text" placeholder="Link"></input>
+                    <button id="illustration--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>   
+                </div>  
+                <ul id="illustration--list"></ul>                         
+            </div>
+            <div id="logo" class="container_section">
+                <div class="logo--add_element">
+                    <input id="logo--text" type="text" placeholder="Name"></input>
+                    <input id="logo--link" type="text" placeholder="Link"></input>
+                    <button id="logo--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save</button>   
+                </div>  
+                <ul id="logo--list"></ul>                          
+            </div>
+            <div id="front_and_back" class="container_section">
+                <div class="front_and_back--add_element">
+                    <input id="front_and_back--text" type="text" placeholder="Name"></input>
+                    <input id="front_and_back--link" type="text" placeholder="Link"></input>
+                    <button id="front_and_back--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>   
+                </div>  
+                <ul id="front_and_back--list"></ul>                          
+            </div>
+            <div id="usefull_link" class="container_section">
+                <div class="usefull_link--add_element">
+                    <input id="usefull_link--text" type="text" placeholder="Name"></input>
+                    <input id="usefull_link--link" type="text" placeholder="Link"></input>
+                    <button id="usefull_link--add" class="add--button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Save
+                    </button>   
+                </div>  
+                <ul id="usefull_link--list"></ul>                           
+            </div>
+        </div> 
+        <footer>
+            <span>Created by</span> <a class="made_by" href="https://github.com/GustavoSouza12" target="_blank">Gustavo</a>
+        </footer>
     </body>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
