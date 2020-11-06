@@ -121,59 +121,65 @@ function imageAndVideo__saveAndShowTools(){
 
     let image_and_video__text_array = JSON.parse(localStorage.getItem('image_and_video__text_array')) || [];
     let image_and_video__link_array = JSON.parse(localStorage.getItem('image_and_video__link_array')) || [];
-
+ 
     // add a tool
-    image_and_video__add.onclick = function () {
+    image_and_video__add.onclick = function() {
     
         var text = image_and_video__text.value
         var link = image_and_video__link.value
 
         if ((text == "") || (link == "")) {
             alert('Please, fill in two fields!')
-        } else {
+        } else{
             image_and_video__text_array.push(text)
             image_and_video__link_array.push(link)
+
             localStorage.setItem('image_and_video__text_array', JSON.stringify(image_and_video__text_array))
             localStorage.setItem('image_and_video__link_array', JSON.stringify(image_and_video__link_array))
-            
+     
+
             image_and_video__text.value = ''
             image_and_video__link.value = ''
-            
+
             // add a tool to the list
             image_and_video__list.innerHTML +=   `<li>
-                                    <a href=${link} target="_blank">${text}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
-                                </li>`
+                                                    <a href=${link} target="_blank">${text}</a>    
+                                                    <i class="fa fa-trash delete"></i> 
+                                                        </li>`                                
         }
         
-
     };
 
     function imageAndVideo__showTools(){
-        image_and_video__text_array.forEach(function (element, index) {
-            let i = 0
+        image_and_video__text_array.forEach(function (element, i) {
+
+
             var link = JSON.parse(localStorage.getItem('image_and_video__link_array')) || [];
             image_and_video__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+           i = i++
         });
     }
     imageAndVideo__showTools()
 
     // delete a tool
-    image_and_video__list.addEventListener('click', deletetask)
-
-    function deletetask(ev) {
+    
+    image_and_video__list.addEventListener('click', deleteTool)
+    
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            image_and_video__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            image_and_video__text_array.splice(id, 1)
+            image_and_video__link_array.splice(id, 1)
             localStorage.setItem('image_and_video__text_array', JSON.stringify(image_and_video__text_array))
             localStorage.setItem('image_and_video__link_array', JSON.stringify(image_and_video__link_array))
+          
         }
+       
     }
 }    
 
@@ -216,12 +222,12 @@ function documentation__saveAndShowTools(){
     };
 
     function documentation__showTools(){
-        documentation__text_array.forEach(function (element, index) {
-            let i = 0
+        documentation__text_array.forEach(function (element, i) {
+
             var link = JSON.parse(localStorage.getItem('documentation__link_array')) || [];
             documentation__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
             i = i + 1
         });
@@ -229,14 +235,15 @@ function documentation__saveAndShowTools(){
     documentation__showTools()
 
     // delete a tool
-    documentation__list.addEventListener('click', deletetask)
+    documentation__list.addEventListener('click', deleteTool)
 
-    function deletetask(ev) {
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            documentation__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            documentation__text_array.splice(id, 1)
+            documentation__link_array.splice(id, 1)
             localStorage.setItem('documentation__text_array', JSON.stringify(documentation__text_array))
             localStorage.setItem('documentation__link_array', JSON.stringify(documentation__link_array))
         }
@@ -283,27 +290,27 @@ function design__saveAndShowTools(){
     };
 
     function design__showTools(){
-        design__text_array.forEach(function (element, index) {
-            let i = 0
+        design__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('design__link_array')) || [];
             design__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i++
         });
     }
     design__showTools()
 
     // delete a tool
-    design__list.addEventListener('click', deletetask)
+    design__list.addEventListener('click', deleteTool)
 
-    function deletetask(ev) {
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            design__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            design__text_array.splice(id, 1)
+            design__link_array.splice(id, 1)
             localStorage.setItem('design__text_array', JSON.stringify(design__text_array))
             localStorage.setItem('design__link_array', JSON.stringify(design__link_array))
         }
@@ -350,27 +357,27 @@ function font__saveAndShowTools(){
     };
 
     function font__showTools(){
-        font__text_array.forEach(function (element, index) {
-            let i = 0
+        font__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('font__link_array')) || [];
             font__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i = i++
         });
     }
     font__showTools()
 
     // delete a tool
-    font__list.addEventListener('click', deletetask)
+    font__list.addEventListener('click', deleteTool)
 
-    function deletetask(ev) {
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            font__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            font__text_array.splice(id, 1)
+            font__link_array.splice(id, 1)
             localStorage.setItem('font__text_array', JSON.stringify(font__text_array))
             localStorage.setItem('font__link_array', JSON.stringify(font__link_array))
         }
@@ -417,27 +424,27 @@ function illustration__saveAndShowTools(){
     };
 
     function illustration__showTools(){
-        illustration__text_array.forEach(function (element, index) {
-            let i = 0
+        illustration__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('illustration__link_array')) || [];
             illustration__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i++
         });
     }
     illustration__showTools()
 
     // delete a tool
-    illustration__list.addEventListener('click', deletetask)
+    illustration__list.addEventListener('click', deleteTool)
 
-    function deletetask(ev) {
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            illustration__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            illustration__text_array.splice(id, 1)
+            illustration__link_array.splice(id, 1)
             localStorage.setItem('illustration__text_array', JSON.stringify(illustration__text_array))
             localStorage.setItem('illustration__link_array', JSON.stringify(illustration__link_array))
         }
@@ -484,14 +491,13 @@ function logo__saveAndShowTools(){
     };
 
     function logo__showTools(){
-        logo__text_array.forEach(function (element, index) {
-            let i = 0
+        logo__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('logo__link_array')) || [];
             logo__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i++
         });
     }
     logo__showTools()
@@ -502,9 +508,10 @@ function logo__saveAndShowTools(){
     function deletetask(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            logo__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            logo__text_array.splice(id, 1)
+            logo__link_array.splice(id, 1)
             localStorage.setItem('logo__text_array', JSON.stringify(logo__text_array))
             localStorage.setItem('logo__link_array', JSON.stringify(logo__link_array))
         }
@@ -550,27 +557,27 @@ function front_and_back__saveAndShowTools(){
     };
 
     function front_and_back__showTools(){
-        front_and_back__text_array.forEach(function (element, index) {
-            let i = 0
+        front_and_back__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('front_and_back__link_array')) || [];
             front_and_back__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i++
         });
     }
     front_and_back__showTools()
 
     // delete a tool
-    front_and_back__list.addEventListener('click', deletetask)
+    front_and_back__list.addEventListener('click', deleteTool)
 
-    function deletetask(ev) {
+    function deleteTool(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            front_and_back__text_array.splice(id, 1)
+            let id = ev.target.getAttribute('id')
 
+            front_and_back__text_array.splice(id, 1)
+            front_and_back__link_array.splice(id, 1)
             localStorage.setItem('front_and_back__text_array', JSON.stringify(front_and_back__text_array))
             localStorage.setItem('front_and_back__link_array', JSON.stringify(front_and_back__link_array))
         }
@@ -616,14 +623,13 @@ function usefull_link__saveAndShowTools(){
     };
 
     function usefull_link__showTools(){
-        usefull_link__text_array.forEach(function (element, index) {
-            let i = 0
+        usefull_link__text_array.forEach(function (element, i) {
             var link = JSON.parse(localStorage.getItem('usefull_link__link_array')) || [];
             usefull_link__list.innerHTML +=   `<li>
                                     <a href=${link[i]} target="_blank">${element}</a>    
-                                    <i id="" class="fa fa-trash delete"></i> 
+                                    <i id=${i} class="fa fa-trash delete"></i> 
                                 </li>`
-            i = i + 1
+            i++
         });
     }
     usefull_link__showTools()
@@ -634,9 +640,10 @@ function usefull_link__saveAndShowTools(){
     function deletetask(ev) {
         if (ev.target.classList.contains('delete')) {
             ev.target.parentElement.remove()
-            var id = this.getAttribute('id')
-            usefull_link__text_array.splice(id, 1)
+            id = ev.target.getAttribute('id')
 
+            usefull_link__text_array.splice(id, 1)
+            usefull_link__link_array.splice(id, 1)
             localStorage.setItem('usefull_link__text_array', JSON.stringify(usefull_link__text_array))
             localStorage.setItem('usefull_link__link_array', JSON.stringify(usefull_link__link_array))
         }
