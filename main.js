@@ -123,7 +123,18 @@ function imageAndVideo__saveAndShowTools(){
     let image_and_video__link_array = JSON.parse(localStorage.getItem('image_and_video__link_array')) || [];
  
     // add a tool
-    image_and_video__add.onclick = function() {
+
+    //Add by pressing enter - Tiago Sestari
+    image_and_video__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewImageAndVideo();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+        
+    image_and_video__add.onclick = function() {addNewImageAndVideo()} 
+    
+    function addNewImageAndVideo() {
     
         var text = image_and_video__text.value
         var link = image_and_video__link.value
@@ -149,6 +160,8 @@ function imageAndVideo__saveAndShowTools(){
         }
         
     };
+
+    
 
     function imageAndVideo__showTools(){
         image_and_video__text_array.forEach(function (element, i) {
@@ -196,7 +209,18 @@ function documentation__saveAndShowTools(){
 
 
     // add a tool
-    documentation__add.onclick = function () {
+
+    //Add by pressing enter - Tiago Sestari
+    documentation__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewDocumentation();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+
+    documentation__add.onclick = function (){addNewDocumentation()}
+    
+    function addNewDocumentation() {
     
         var text = documentation__text.value
         var link = documentation__link.value
@@ -262,7 +286,16 @@ function design__saveAndShowTools(){
 
 
     // add a tool
-    design__add.onclick = function () {
+    //Add by pressing enter - Tiago Sestari
+    design__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewDesign();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    design__add.onclick = function() {addNewDesign()}
+    
+    function addNewDesign() {
     
         var text = design__text.value
         var link = design__link.value
@@ -329,7 +362,17 @@ function font__saveAndShowTools(){
 
 
     // add a tool
-    font__add.onclick = function () {
+    //Add by pressing enter - Tiago Sestari
+    font__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewFont();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    
+    font__add.onclick = function () {addNewFont()}
+    
+    function addNewFont() {
     
         var text = font__text.value
         var link = font__link.value
@@ -396,7 +439,16 @@ function illustration__saveAndShowTools(){
 
 
     // add a tool
-    illustration__add.onclick = function () {
+    //Add by pressing enter - Tiago Sestari
+    illustration__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewIllustration();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    illustration__add.onclick = function () {addNewIllustration()}
+    
+    function addNewIllustration() {
     
         var text = illustration__text.value
         var link = illustration__link.value
@@ -463,7 +515,18 @@ function logo__saveAndShowTools(){
 
 
     // add a tool
-    logo__add.onclick = function () {
+
+    //Add by pressing enter - Tiago Sestari
+    logo__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewLogo();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    
+    logo__add.onclick = function() {addNewLogo()} 
+    
+    function addNewLogo() {
     
         var text = logo__text.value
         var link = logo__link.value
@@ -529,7 +592,16 @@ function front_and_back__saveAndShowTools(){
 
 
     // add a tool
-    front_and_back__add.onclick = function () {
+    //Add by pressing enter - Tiago Sestari
+    front_and_back__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewFrontAndBack();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    front_and_back__add.onclick = function() {addNewFrontAndBack()}
+    
+    function addNewFrontAndBack() {
     
         var text = front_and_back__text.value
         var link = front_and_back__link.value
@@ -595,7 +667,16 @@ function usefull_link__saveAndShowTools(){
 
 
     // add a tool
-    usefull_link__add.onclick = function () {
+    //Add by pressing enter - Tiago Sestari
+    usefull_link__link.onkeyup = function(event) {
+        if(event.which == 13) {
+            addNewUsefullLink();
+        }
+    }
+    //------------------------------------------------------------------------------------------
+    usefull_link__add.onclick = function() {addNewUsefullLink()} 
+    
+    function addNewUsefullLink() {
     
         var text = usefull_link__text.value
         var link = usefull_link__link.value
